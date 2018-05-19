@@ -6,6 +6,8 @@
 
 Установка:
 
+dependency : git ansible docker-ce
+
 git clone  https://github.com/jkepeer/yourltest-.git
 
 cd yourltest-
