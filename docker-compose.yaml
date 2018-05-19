@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql:5.7
+    env_file:
+      - env.mysql
+    volumes:
+      - /opt/mysql:/var/lib/mysql:rw
+      - ./volumes/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d:ro
+      - /tmp:/var/run/mysqld:rw
+    logging:
+      driver: json-file
+      options:
+        max-size: 20m
+        max-file: "30"
+    privileged: true
+
+  yourls:
+    # replace "image" with "build" for developing purpose
+    # build: ./
+    #
+    # replae "x.y.z" with "x.y.z-noadmin" for production environment
+    # image: guessi/docker-yourls:1.7.2-noadmin
+    image: guessi/docker-yourls:1.7.2
+    links:
+      - mysql:mysql
+    env_file:
+      - env.yourls
+    ports:
+      - 80:80
+    depends_on:
+      - mysql
+    logging:
+      driver: json-file
+      options:
+        max-size: 20m
+        max-file: "30"
