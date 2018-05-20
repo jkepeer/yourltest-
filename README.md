@@ -6,12 +6,12 @@
 
 Установка:
 
-dependency : git ansible docker-ce
+dependency : git ansible docker
 
 git clone  https://github.com/jkepeer/yourltest-.git
 
 cd yourltest-
 
-ansible-playbook -i hosts  ans1.yaml --connection=local
+ansible-playbook -i hosts  ans.yaml --connection=local
 
 docker-compose up -d
