@@ -10,9 +10,6 @@
       command: systemctl status docker
 
     - name: Installs pack
-      command: docker info
-
-    - name: Installs pack
       command: wget https://dl.bintray.com/docker-compose/master/docker-compose-Linux-x86_64
 
     - name: Installs pack
