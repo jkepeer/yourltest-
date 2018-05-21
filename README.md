@@ -6,7 +6,7 @@
 
 Установка:
 
-dependency : git ansible docker
+apt-get install git ansible docker.io -y
 
 git clone  https://github.com/jkepeer/yourltest-.git
 
