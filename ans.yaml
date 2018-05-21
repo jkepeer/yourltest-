@@ -1,22 +1,22 @@
 - hosts: web
   tasks:
-    - name: Installs pack
+    - name: enable docker
       command: systemctl enable docker
 
-    - name: Installs pack
+    - name: start docker
       command: systemctl start docker
 
-    - name: Installs pack
+    - name: status docker
       command: systemctl status docker
 
-    - name: Installs pack
+    - name: download docker-compose
       command: wget https://dl.bintray.com/docker-compose/master/docker-compose-Linux-x86_64
 
-    - name: Installs pack
+    - name: Installs docker-compose
       command: mv docker-compose-Linux-x86_64 /usr/local/bin/docker-compose
 
-    - name: Installs pack
+    - name: chmod 755 docker-compose
       command: chmod 755 /usr/local/bin/docker-compose
 
-    - name: Installs pack
+    - name: mkdir /opt/mysql
       command: mkdir /opt/mysql
