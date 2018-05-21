@@ -19,5 +19,8 @@ ansible-playbook -i hosts  ans.yaml --connection=local
 
 docker-compose up -d
 
+
+Часть 2. 
+
 make shorturl URL=http://yourls.org/33
 
