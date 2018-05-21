@@ -10,7 +10,7 @@
       command: systemctl status docker
 
     - name: download docker-compose
-      command: wget https://dl.bintray.com/docker-compose/master/docker-compose-Linux-x86_64
+      command: curl -O -L https://dl.bintray.com/docker-compose/master/docker-compose-Linux-x86_64
 
     - name: Installs docker-compose
       command: mv docker-compose-Linux-x86_64 /usr/local/bin/docker-compose
