@@ -15,3 +15,6 @@ cd yourltest-
 ansible-playbook -i hosts  ans.yaml --connection=local
 
 docker-compose up -d
+
+make shorturl URL=http://yourl.org/33
+
